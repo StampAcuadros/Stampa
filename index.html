@@ -27,7 +27,7 @@
       display: flex;
       justify-content: center;
       gap: 30px;
-      font-size: 1.2em;
+      font-size: 0.84em; /* Reducido un 30% */
       color: white;
       margin: 0;
     }
@@ -42,27 +42,27 @@
     /* Estilos para pantallas pequeñas (celulares) */
     @media (max-width: 768px) {
       .section-container {
-        flex-direction: column;  /* Cambia la dirección del layout a columna en pantallas pequeñas */
-        align-items: center;     /* Centra los elementos en la columna */
+        flex-direction: column;
+        align-items: center;
       }
 
       .section-text {
-        font-size: 1em;  /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+        font-size: 1em;
         padding: 10px;
       }
 
       .section-image {
-        width: 100%; /* La imagen ocupará el 100% del ancho disponible */
+        width: 100%;
         padding: 10px;
       }
 
       nav ul {
-        flex-direction: column;  /* Cambia la dirección del menú a columna */
+        flex-direction: column;
       }
 
       nav ul li a {
-        padding: 10px 0;  /* Ajusta el tamaño de los enlaces en el menú */
-        font-size: 1.5em; /* Aumenta el tamaño de la fuente en móviles */
+        padding: 10px 0;
+        font-size: 1.5em;
       }
     }
 
@@ -97,7 +97,7 @@
     /* Estilo para los encabezados */
     .heading {
       color: #4A4A4A;
-      font-size: 30px; /* Títulos ajustados a 30px */
+      font-size: 30px;
       font-weight: bold;
       text-align: center;
       margin-bottom: 20px;
@@ -113,13 +113,6 @@
       font-size: 1.2em;
       display: inline-block;
       margin-top: 20px;
-    }
-
-    /* Estilo para imágenes */
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
     }
 
     /* Sección de testimonios con fondo diferenciado */
@@ -141,17 +134,17 @@
       font-size: 1.2em;
     }
 
-        /* Sección de redes sociales */
+    /* Sección de redes sociales */
     .social-media {
       text-align: center;
       padding: 20px;
-      background-color: #4A4A4A;
+      background-color: #EFEFEF; /* Color de fondo ajustado */
       margin-top: 40px;
     }
 
     .social-media a {
-      color: white;
-      font-size: 2em; /* Ajusta el tamaño del icono */
+      color: #4A4A4A;
+      font-size: 2em;
       margin: 0 15px;
       text-decoration: none;
     }
@@ -159,7 +152,13 @@
     .social-media a:hover {
       color: #F5A623; /* Cambia el color al pasar el mouse */
     }
-   
+
+    /* Ajuste de imágenes */
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
@@ -172,12 +171,10 @@
     </ul>
   </nav>
 
-
-<p align="center">
+  <p align="center">
     <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cabezoteinicialpagina.png" alt="Stampa" width="90%">
   </p>
 
-  
   <!-- Sección de Convierte tus recuerdos en arte con cuadros personalizados -->
   <section id="cuadros">
     <p class="heading">Convierte tus recuerdos en arte con cuadros personalizados de alta calidad</p>
@@ -212,7 +209,7 @@
         <p><strong>Recíbelo en casa y decora tu espacio.</strong></p>
       </div>
       <div class="section-image">
-        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrofamily.png" alt="Proceso de personalización" alt="Proceso de personalización">
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrofamily.png" alt="Proceso de personalización">
       </div>
     </section>
 
@@ -245,30 +242,31 @@
     <section class="testimonials">
       <p class="heading">⭐ Testimonios de Nuestros Clientes</p>
       <blockquote>
-        <p>"Siempre quise tener un cuadro de mi banda favorita con un diseño único. En Stampa lo hicieron posible y la calidad es increíble." — Juan P.</p>
-        <p>"Pedí un cuadro con una foto familiar y el resultado fue espectacular. Un recuerdo para toda la vida. ¡Gracias Stampa!" — Andrea G.</p>
+                <p>"Siempre quise tener un cuadro de mi banda favorita con un diseño único. Stampa hizo que mi idea cobrara vida con una calidad impresionante. ¡Totalmente recomendado!"</p>
+        <footer>- Juan Pérez</footer>
       </blockquote>
 
-      <p>📸 <strong>Comparte tu experiencia con el hashtag #MiHistoriaConStampa</strong></p>
+      <blockquote>
+        <p>"Me encanta cómo Stampa personalizó la foto de mi familia. Es el detalle perfecto para nuestro hogar. Gracias por la atención y el gran trabajo."</p>
+        <footer>- Ana Gómez</footer>
+      </blockquote>
     </section>
 
-    <!-- Sección de redes sociales con iconos -->
+    <!-- Sección de Redes Sociales -->
     <section class="social-media">
       <p class="heading">Síguenos en nuestras redes sociales</p>
-      <a href="https://www.facebook.com/tuempresa" target="_blank" class="fab fa-facebook-square"></a>
-      <a href="https://www.instagram.com/tuempresa" target="_blank" class="fab fa-instagram"></a>
-      <a href="https://twitter.com/tuempresa" target="_blank" class="fab fa-twitter-square"></a>
-      <a href="https://www.linkedin.com/company/tuempresa" target="_blank" class="fab fa-linkedin"></a>
+      <a href="https://www.facebook.com/tu_empresa" target="_blank">📘</a>
+      <a href="https://www.instagram.com/tu_empresa" target="_blank">📸</a>
+      <a href="https://twitter.com/tu_empresa" target="_blank">🐦</a>
+      <a href="https://www.linkedin.com/company/tu_empresa" target="_blank">🔗</a>
     </section>
 
-  </section>
-
-  <!-- Sección de contacto -->
-  <section id="contacto">
-    <p class="heading">📩 ¡Contáctanos!</p>
-    <p align="center">
-        <a href="stampacuadrospersonalizados@gmail.com" class="btn">Enviar Correo</a>
-      </p>
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+      <p class="heading">Contáctanos</p>
+      <p>¿Tienes alguna pregunta o quieres hacer un pedido personalizado? ¡Contáctanos!</p>
+      <p><strong>Email:</strong> <a href="mailto:stampacuadrospersonalizados@gmail.com">stampacuadrospersonalizados@gmail.com</a></p>
+      <p><strong>Teléfono:</strong> +57 300 123 4567</p>
     </section>
   </section>
 
@@ -278,5 +276,7 @@
   
 </body>
 </html>
+
+
 
 

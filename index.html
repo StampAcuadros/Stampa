@@ -32,7 +32,7 @@
       display: flex;
       justify-content: center;
       gap: 30px;
-      font-size: 0.8em;  /* Reducido un 20% más */
+      font-size: 0.8em; /* Reducido un 20% */
       color: white;
       margin: 0;
     }
@@ -61,7 +61,11 @@
       padding: 20px;
       font-size: 1.1em;
       line-height: 1.6;
-      text-align: center;  /* Centrado */
+      text-align: center; /* Centrando la tipografía */
+    }
+
+    .section-text strong {
+      font-weight: bold;
     }
 
     .section-image {
@@ -71,8 +75,8 @@
     }
 
     .section-image img {
-      max-width: 100%;  /* Asegura que la imagen se adapta al tamaño del contenedor */
-      height: auto;     /* Mantiene la proporción de la imagen */
+      max-width: 100%;
+      height: auto;
       border-radius: 10px;
     }
 
@@ -108,7 +112,7 @@
     .testimonials blockquote {
       font-style: italic;
       color: #4A4A4A;
-      font-size: 0.9em; /* 10% más pequeña */
+      font-size: 1em; /* Tipografía 10% más pequeña */
     }
 
     .testimonials p {
@@ -120,7 +124,7 @@
     .social-media {
       text-align: center;
       padding: 20px;
-      background-color: #EFEFEF; /* Color de fondo ajustado */
+      background-color: #EFEFEF;
       margin-top: 40px;
     }
 
@@ -132,7 +136,7 @@
     }
 
     .social-media a:hover {
-      color: #F5A623; /* Cambia el color al pasar el mouse */
+      color: #F5A623;
     }
 
     /* Ajuste de imágenes */
@@ -145,7 +149,7 @@
     /* Estilos para pantallas pequeñas (celulares) */
     @media (max-width: 768px) {
       .section-container {
-        flex-direction: column !important; /* Cambiar la dirección del flex */
+        flex-direction: column !important;
         align-items: center;
         text-align: center;
       }
@@ -178,7 +182,7 @@
     <ul>
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#productos">Nuestros productos</a></li>
-      <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+      <li><a href="#nosotros">Sobre Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
@@ -188,76 +192,78 @@
   </p>
 
   <!-- Sección de Convierte tus recuerdos en arte con cuadros personalizados -->
-<section id="cuadros">
-  <p class="heading">Convierte tus recuerdos en arte con cuadros personalizados de alta calidad</p>
+  <section id="cuadros">
+    <p class="heading">Convierte tus recuerdos en arte con cuadros personalizados de alta calidad</p>
 
-  <section class="section-container">
-    <div class="section-text">
-      <p><strong>Personalización sin límites</strong><br>Elige una imagen de nuestro catálogo o sube tu propia foto.</p>
-      <p><strong>Calidad Premium</strong><br>Impresión en alta definición con materiales resistentes.</p>
-      <p><strong>Diseño Exclusivo</strong><br>Cada cuadro refleja tu estilo y personalidad.</p>
-      <p><strong>Sostenibilidad</strong><br>Materiales ecológicos y tintas sin tóxicos.</p>
-      <p><strong>Entrega Segura</strong><br>Compra fácil y envío a todo el país con garantía de satisfacción.</p>
-    </div>
-    <!-- En pantallas pequeñas, la imagen estará debajo del texto -->
-    <div class="section-image">
-      <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrobrujagato.jpg" alt="Cuadro personalizado">
-    </div>
+    <section class="section-container">
+      <div class="section-text">
+        <p><strong>Personalización sin límites</strong><br>Elige una imagen de nuestro catálogo o sube tu propia foto.</p>
+        <p><strong>Calidad Premium</strong><br>Impresión en alta definición con materiales resistentes.</p>
+        <p><strong>Diseño Exclusivo</strong><br>Cada cuadro refleja tu estilo y personalidad.</p>
+        <p><strong>Sostenibilidad</strong><br>Materiales ecológicos y tintas sin tóxicos.</p>
+        <p><strong>Entrega Segura</strong><br>Compra fácil y envío a todo el país con garantía de satisfacción.</p>
+      </div>
+      <div class="section-image">
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrobrujagato.jpg" alt="Cuadro personalizado">
+      </div>
+    </section>
+
+    <p align="center">
+      <a href="#" class="btn">🎨 Personaliza tu cuadro ahora 🎨</a>
+    </p>
   </section>
 
+  <!-- Sección de cómo funciona Stampa -->
   <p align="center">
-    <a href="#" class="btn">🎨 Personaliza tu cuadro ahora 🎨</a>
+    <img src="pasos_proceso.png" alt="¿Cómo funciona Stampa?" width="700" style="border-radius: 10px;">
   </p>
-</section>
-
-<!-- Sección de cómo funciona Stampa -->
-<section id="como-funciona">
-  <p class="heading">¿Cómo funciona Stampa?</p>
 
   <section class="section-container">
-    <div class="section-image">
-      <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/primerpaso.png" alt="¿Cómo funciona Stampa?" width="280" style="border-radius: 10px;">
-    </div>
     <div class="section-text">
-      <p><strong>Elige tu imagen o sube tu foto.</strong></p>
-      <p><strong>Nosotros la retocamos y optimizamos para impresión.</strong></p>
-      <p><strong>Imprimimos en materiales premium con calidad HD.</strong></p>
-      <p><strong>Recíbelo en casa y decora tu espacio.</strong></p>
+      <p><strong><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/primerpaso.png" alt="Paso 1" style="height: 2em; width: 2em;"> Elige tu imagen o sube tu foto.</strong></p>
+      <p><strong><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/segundopaso.png" alt="Paso 2" style="height: 2em; width: 2em;"> Nosotros la retocamos y optimizamos para impresión.</strong></p>
+      <p><strong><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/tercerpaso.png" alt="Paso 3" style="height: 2em; width: 2em;"> Imprimimos en materiales premium con calidad HD.</strong></p>
+      <p><strong><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuartopaso.png" alt="Paso 4" style="height: 2em; width: 2em;"> Recíbelo en casa y decora tu espacio.</strong></p>
+    </div>
+    <div class="section-image">
+      <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrofamily.png" alt="Proceso de personalización">
     </div>
   </section>
 
   <p align="center">
     <a href="#" class="btn">Explorar Catálogo</a>
   </p>
-</section>
 
-<!-- Sección Testimonios -->
-<section class="testimonials">
-  <p class="heading">Lo que dicen nuestros clientes:</p>
-  <blockquote>
-    <p>"Siempre quise tener un cuadro de mis gatos, y Stampa lo hizo realidad. ¡La calidad es increíble!"</p>
-    <footer>- Laura Martínez</footer>
-  </blockquote>
-  <blockquote>
-    <p>"Pedí un cuadro personalizado para mi mascota, y el resultado fue simplemente espectacular. ¡Gracias Stampa!"</p>
-    <footer>- Ana López</footer>
-  </blockquote>
-  <blockquote>
-    <p>"La calidad de impresión es increíble. ¡Lo recomendaré a todos!"</p>
-    <footer>- José Martínez</footer>
-  </blockquote>
-</section>
+  <!-- Sección Testimonios -->
+  <section class="testimonials">
+    <p class="heading">Lo que dicen nuestros clientes:</p>
+    <blockquote>
+      <p>"Siempre quise tener un cuadro de mis gatos, y Stampa lo hizo realidad. ¡La calidad es increíble!"</p>
+      <footer>- Laura Martínez</footer>
+    </blockquote>
+    <blockquote>
+      <p>"Pedí un cuadro personalizado para mi mascota, y el resultado fue simplemente espectacular. ¡Gracias Stampa!"</p>
+      <footer>- Ana López</footer>
+    </blockquote>
+    <blockquote>
+      <p>"La calidad de impresión es increíble. ¡Lo recomendaré a todos!"</p>
+      <footer>- Juan Pérez</footer>
+    </blockquote>
+  </section>
 
-<p>📩 stampacuadrospersonalizados@gmail.com</p>
-<p>📍 **Bogotá-Colombia** Envíos a nivel nacional</p>
-
-<!-- Sección Redes Sociales -->
-<section class="social-media">
-  <p>Síguenos en nuestras redes sociales</p>
-  <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_LA" target="_blank">Facebook</a>
-  <a href="https://www.instagram.com/?hl=es-la" target="_blank">Instagram</a>
-  <a href="https://twitter.com/?lang=es" target="_blank">Twitter</a>
-</section>
+  <!-- Sección Redes Sociales -->
+  <section class="social-media">
+    <p>Síguenos en nuestras redes sociales:</p>
+    <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_LA">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 2em; margin-right: 15px;">
+    </a>
+    <a href="https://twitter.com">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_As_of_2021.svg" alt="Twitter" style="width: 2em; margin-right: 15px;">
+    </a>
+    <a href="https://www.tiktok.com">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/TikTok_logo.svg" alt="TikTok" style="width: 2em;">
+    </a>
+  </section>
 
 
 <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>

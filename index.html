@@ -285,17 +285,6 @@
             font-size: 20px;
         }
 
-        /* Contact Info */
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            margin: 40px 0;
-        }
-        .contact-info div {
-            text-align: center;
-            width: 200px;
-        }
-
         /* Sección Sobre Nosotros */
         .mission-vision-values {
             display: flex;
@@ -350,8 +339,13 @@
             }
 
             nav a {
-                font-size: 12px;
+                font-size: 10px;
                 margin: 0 5px;
+            }
+
+            .category-icons {
+                flex-direction: row;
+                gap: 15px;
             }
 
             .products {
@@ -365,6 +359,7 @@
 
             .testimonials .testimonial {
                 width: 80%;
+                margin-bottom: 20px;
             }
 
             .how-it-works {
@@ -374,6 +369,12 @@
 
             .how-it-works img {
                 width: 80%;
+                margin-right: 0;
+            }
+
+            .features ul {
+                flex-direction: column;
+                gap: 10px;
             }
 
             .feature-details {
@@ -381,117 +382,191 @@
                 align-items: center;
             }
 
+            .feature-text {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
             .feature-details img {
                 width: 80%;
             }
-        }
 
+            .category-icons div {
+                width: 55px;
+                height: 55px;
+            }
+
+            .mission-vision-values .vision-mission {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mission-vision-values .vision-mission div {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .mission-vision-values img {
+                max-width: 80%;
+            }
+
+            .mission-vision-values .values {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mission-vision-values .values div {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .mission-vision-values .values img {
+                max-width: 80%;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Menú -->
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Nuestros productos</a>
-        <a href="#sobre-nosotros">Sobre Nosotros</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
 
-    <!-- Imagen debajo del menú -->
-    <div class="header-image">
-        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cabezotepaginaprincipal.png" alt="Encabezado">
+<!-- Menú -->
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Nuestros productos</a>
+    <a href="#sobre-nosotros">Sobre Nosotros</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- Imagen debajo del menú -->
+<div class="header-image">
+    <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cabezotepaginaprincipal.png" alt="Encabezado">
+</div>
+
+<!-- Categorías -->
+<div class="category-icons">
+    <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/mascota.jpg" alt="Mascotas"></div>
+    <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/paisajes.jpg" alt="Paisajes"></div>
+    <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/abstracto.jpg" alt="Abstracto"></div>
+    <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/personalizado.jpg" alt="Personalizada"></div>
+</div>
+
+<!-- ¿Cómo funciona Stampa? -->
+<div class="how-it-works">
+    <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrofamily.png" alt="Imagen de familia">
+    <div>
+        <h2>¿Cómo funciona Stampa?</h2>
+        <ul>
+            <li>1. Elige tu imagen o sube tu foto.</li>
+            <li>2. Nosotros la retocamos y optimizamos para impresión.</li>
+            <li>3. Imprimimos en materiales premium con calidad HD.</li>
+            <li>4. Recíbelo en casa y decora tu espacio.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Características -->
+<div class="features">
+    <h2>Conviértete tus recuerdos en arte con cuadros personalizados de alta calidad</h2>
+
+    <div class="feature-details">
+        <div class="feature-text">
+            <p><strong>Personalización sin límites:</strong> Elige una imagen de nuestro catálogo o sube tu propia foto.</p>
+            <p><strong>Calidad Premium:</strong> Impresión en alta definición con materiales resistentes.</p>
+            <p><strong>Diseño Exclusivo:</strong> Cada cuadro refleja tu estilo y personalidad.</p>
+            <p><strong>Sostenibilidad:</strong> Materiales ecológicos y tintas sin tóxicos.</p>
+            <p><strong>Entrega Segura:</strong> Compra fácil y envío a todo el país con garantía de satisfacción.</p>
+        </div>
+        <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/recuadrobrujasolo.jpg" alt="Cuadro personalizado">
     </div>
 
-    <!-- Categorías con iconos -->
-    <div class="category-icons">
-        <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/mascota.jpg" alt="Mascotas"></div>
-        <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/paisajes.jpg" alt="Paisajes"></div>
-        <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/abstracto.jpg" alt="Abstracto"></div>
-        <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/personalizado.jpg" alt="Personalizada"></div>
-    </div>
+    <a href="#contacto" class="customize-btn">Personaliza tu cuadro ahora</a>
+</div>
 
-    <!-- ¿Cómo funciona Stampa? -->
-    <div class="how-it-works">
-        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrofamily.png" alt="Imagen de familia">
-        <div>
-            <h2>¿Cómo funciona Stampa?</h2>
-            <ul>
-                <li>1. Elige tu imagen o sube tu foto.</li>
-                <li>2. Nosotros la retocamos y optimizamos para impresión.</li>
-                <li>3. Imprimimos en materiales premium con calidad HD.</li>
-                <li>4. Recíbelo en casa y decora tu espacio.</li>
-            </ul>
-        </div>
-    </div>
+<!-- Sección Sobre Nosotros -->
+<div class="mission-vision-values">
+    <div>
+        <h2>Sobre Nosotros</h2>
+        <p>Stampa es una empresa especializada en la impresión de cuadros en retablos personalizados. Ofrecemos un amplio catálogo de imágenes preseleccionadas que incluyen paisajes, caricaturas, superhéroes, bandas de rock, diseños 3D y más. Además, permitimos a los clientes enviar sus propias fotografías para ser retocadas y transformadas en piezas únicas listas para impresión.</p>
 
-    <!-- Características -->
-    <div class="features">
-        <h2>Conviértete tus recuerdos en arte con cuadros personalizados de alta calidad</h2>
-
-        <div class="feature-details">
-            <div class="feature-text">
-                <p><strong>Personalización sin límites:</strong> Elige una imagen de nuestro catálogo o sube tu propia foto.</p>
-                <p><strong>Calidad Premium:</strong> Impresión en alta definición con materiales resistentes.</p>
-                <p><strong>Diseño Exclusivo:</strong> Cada cuadro refleja tu estilo y personalidad.</p>
-                <p><strong>Sostenibilidad:</strong> Materiales ecológicos y tintas sin tóxicos.</p>
-                <p><strong>Entrega Segura:</strong> Compra fácil y envío a todo el país con garantía de satisfacción.</p>
-            </div>
-            <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/recuadrobrujasolo.jpg" alt="Cuadro personalizado">
-        </div>
-
-        <a href="#contacto" class="customize-btn">Personaliza tu cuadro ahora</a>
-    </div>
-
-    <!-- Productos -->
-    <div class="products">
-        <div>
-            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadroguerrerosalaa.png" alt="Producto 1">
-        </div>
-        <div>
-            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadromar.jpg" alt="Producto 2">
-        </div>
-        <div>
-            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadroiguanamoto.jpg" alt="Producto 3">
-        </div>
-    </div>
-
-    <!-- Testimonios -->
-    <div class="testimonials">
-        <h2>Lo que dicen nuestros clientes:</h2>
-        <div class="testimonial">
-            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/LauraMart%C3%ADnez.png" alt="Laura Martínez">
-            <p>"Siempre quise tener un cuadro de mis gatos, y Stampa lo hizo realidad. ¡La calidad es increíble!"</p>
-            <p>- Laura Martínez</p>
-        </div>
-        <div class="testimonial">
-            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/ana.png" alt="Ana López">
-            <p>"Pedí un cuadro personalizado para mi mascota, y el resultado fue simplemente espectacular. ¡Gracias Stampa!"</p>
-            <p>- Ana López</p>
-        </div>
-        <div class="testimonial">
-            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/Juan.png" alt="Juan Pérez">
-            <p>"La calidad de impresión es increíble. ¡Lo recomendaré a todos!"</p>
-            <p>- Juan Pérez</p>
+        <div class="text-section">
+            <p><strong>Nuestra Visión:</strong> Convertirnos en la empresa líder en impresión de cuadros personalizados en el mercado nacional e internacional.</p>
+            <p><strong>Misión:</strong> Llevar el arte personalizado a los hogares y espacios de nuestros clientes, transformando sus recuerdos y gustos en piezas únicas de decoración.</p>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Bogotá, Colombia</p>
-        <p>stampacuadrospersonalizados@gmail.com</p>
-        <p>Síguenos en nuestras redes sociales:</p>
-        <div class="social-links">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">YouTube</a>
-        </div>
-    </footer>
+    <div>
+        <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/dragonmision.jpg" alt="Imagen relacionada con misión y visión">
+    </div>
+</div>
 
-    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2025/02/01/00/20250201000217-5NLTVM7D.js"></script>
+<!-- Nuevos valores -->
+<div class="mission-vision-values">
+    <div>
+        <h2>Valores</h2>
+        <p><strong>Creatividad:</strong> Fomentamos la innovación en el diseño y retoque de imágenes.</p>
+        <p><strong>Calidad:</strong> Usamos materiales premium para garantizar la durabilidad de nuestras impresiones.</p>
+        <p><strong>Personalización:</strong> Cada pieza es única y diseñada con el gusto del cliente en mente.</p>
+        <p><strong>Compromiso:</strong> Nos esforzamos por ofrecer el mejor servicio y atención al cliente.</p>
+    </div>
+
+    <div>
+        <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/paisajevision.jpg" alt="Imagen de valores">
+    </div>
+</div>
+
+<!-- Productos -->
+<div class="products">
+    <div>
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadroguerrerosalaa.png" alt="Producto 1">
+    </div>
+    <div>
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadromar.jpg" alt="Producto 2">
+    </div>
+    <div>
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadroiguanamoto.jpg" alt="Producto 3">
+    </div>
+</div>
+
+<!-- Testimonios -->
+<div class="testimonials">
+    <h2>Lo que dicen nuestros clientes:</h2>
+    <div class="testimonial">
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/LauraMart%C3%ADnez.png" alt="Laura Martínez">
+        <p>"Siempre quise tener un cuadro de mis gatos, y Stampa lo hizo realidad. ¡La calidad es increíble!"</p>
+        <p>- Laura Martínez</p>
+    </div>
+    <div class="testimonial">
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/ana.png" alt="Ana López">
+        <p>"Pedí un cuadro personalizado para mi mascota, y el resultado fue simplemente espectacular. ¡Gracias Stampa!"</p>
+        <p>- Ana López</p>
+    </div>
+    <div class="testimonial">
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/Juan.png" alt="Juan Pérez">
+        <p>"La calidad de impresión es increíble. ¡Lo recomendaré a todos!"</p>
+        <p>- Juan Pérez</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Bogotá, Colombia</p>
+    <p>stampacuadrospersonalizados@gmail.com</p>
+    <p>Síguenos en nuestras redes sociales:</p>
+    <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">YouTube</a>
+    </div>
+</footer>
+
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/02/01/00/20250201000217-5NLTVM7D.js"></script>
+
 </body>
 </html>
+
 
 
 

@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f2e7;
-            color: #333; /* Color de texto más oscuro para mayor legibilidad */
+            color: #333;
         }
 
         /* Menú */
@@ -20,7 +20,7 @@
             background-color: #4a4a4a;
             padding: 15px 0;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra sutil al menú */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: white;
@@ -28,10 +28,10 @@
             font-size: 18px;
             font-weight: bold;
             margin: 0 20px;
-            transition: color 0.3s ease; /* Transición suave para color al pasar el cursor */
+            transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #ba9988; /* Color de enlace al pasar el cursor */
+            color: #ba9988;
         }
 
         /* Imagen debajo del menú */
@@ -43,10 +43,10 @@
         .header-image img {
             width: 100%;
             max-width: 1600px;
-            transition: transform 0.3s ease; /* Transición para imagen */
+            transition: transform 0.3s ease;
         }
         .header-image img:hover {
-            transform: scale(1.05); /* Efecto de zoom suave en la imagen */
+            transform: scale(1.05);
         }
 
         /* Categorías con iconos */
@@ -220,7 +220,7 @@
         }
 
         .products div:hover {
-            transform: scale(1.05); /* Efecto de zoom para los productos */
+            transform: scale(1.05);
         }
 
         .products div img {
@@ -285,6 +285,64 @@
             font-size: 20px;
         }
 
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        .contact-info div {
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Sección Sobre Nosotros */
+        .mission-vision-values {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            background-color: #fff;
+            padding: 40px;
+        }
+
+        .mission-vision-values h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .mission-vision-values p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .mission-vision-values .text-section {
+            margin-bottom: 20px;
+        }
+
+        .mission-vision-values .values {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .mission-vision-values .values div {
+            width: 48%;
+            text-align: left;
+        }
+
+        .mission-vision-values .values img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .mission-vision-values .values p strong {
+            font-weight: bold;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             nav {
@@ -327,6 +385,7 @@
                 width: 80%;
             }
         }
+
     </style>
 </head>
 <body>
@@ -396,6 +455,7 @@
         </div>
     </div>
 
+    <!-- Testimonios -->
     <div class="testimonials">
         <h2>Lo que dicen nuestros clientes:</h2>
         <div class="testimonial">
@@ -415,6 +475,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>Bogotá, Colombia</p>
         <p>stampacuadrospersonalizados@gmail.com</p>
@@ -429,9 +490,9 @@
 
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/02/01/00/20250201000217-5NLTVM7D.js"></script>
-
 </body>
 </html>
+
 
 
 

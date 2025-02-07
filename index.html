@@ -97,8 +97,9 @@
             margin-top: 130px;
             padding: 20px;
             color: #333;
-            background-color: white;
-            flex-wrap: wrap;
+            text-align: left; /* Asegura que el texto también se centre */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            background-color: white; /* Fondo blanco */
         }
 
         .how-it-works img {
@@ -146,6 +147,7 @@
             font-size: 30px;
             margin-bottom: 20px;
             color: #ba9988;
+            text-align: center;
         }
 
         .feature-details {
@@ -155,6 +157,7 @@
             gap: 30px;
             width: 100%;
             max-width: 1200px;
+            margin-top: 0 auto;
         }
 
         .feature-text {
@@ -162,8 +165,10 @@
             font-size: 18px;
             line-height: 1.8;
             width: 60%;
+            margin: 0 auto; /* Centra el texto dentro de su contenedor */
+    
         }
-
+    
         .feature-text li {
             margin: 10px 0;
         }
@@ -200,6 +205,84 @@
             background-color: #977346;
         }
 
+                .features h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #ba9988; /* Título con color #ba9988 */
+            text-align: center;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .features li {
+            font-size: 18px;
+            text-align: left;
+            width: 45%;
+        }
+
+        .features li strong {
+            font-weight: bold;
+        }
+
+        .features img {
+            width: 20%; /* Ajusta el tamaño de la imagen */
+            margin-left: 20px;
+        }
+
+        /* Sección Sobre Nosotros */
+        .mission-vision-values {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            background-color: #fff;
+            padding: 40px;
+        }
+
+        .mission-vision-values h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .mission-vision-values p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .mission-vision-values .text-section {
+            margin-bottom: 20px;
+        }
+
+        .mission-vision-values .values {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .mission-vision-values .values div {
+            width: 48%;
+            text-align: left;
+        }
+
+        .mission-vision-values .values img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .mission-vision-values .values p strong {
+            font-weight: bold;
+        }
+
+        
         /* Productos */
         .products {
             display: flex;
@@ -332,6 +415,17 @@
             font-weight: bold;
         }
 
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        .contact-info div {
+            text-align: center;
+            width: 200px;
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             nav {
@@ -343,6 +437,7 @@
                 margin: 0 5px;
             }
 
+            /* Categorías */
             .category-icons {
                 flex-direction: row;
                 gap: 15px;
@@ -365,6 +460,7 @@
             .how-it-works {
                 flex-direction: column;
                 align-items: center;
+                margin-top: 30px; /* Menor margen superior para pantallas pequeñas */
             }
 
             .how-it-works img {
@@ -394,8 +490,14 @@
             .category-icons div {
                 width: 55px;
                 height: 55px;
+                margin-top: -200px; /* Asegura que los círculos permanezcan sobre la imagen */
+                border-width: 4px; /* Reduce el grosor del borde en pantallas pequeñas */
             }
 
+            .category-texts p {
+                font-size: 14px; /* Ajusta el tamaño del texto */
+            }
+            
             .mission-vision-values .vision-mission {
                 flex-direction: column;
                 align-items: center;
@@ -480,6 +582,7 @@
         <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/recuadrobrujasolo.jpg" alt="Cuadro personalizado">
     </div>
 
+    <!-- Botón para personalizar el cuadro -->
     <a href="#contacto" class="customize-btn">Personaliza tu cuadro ahora</a>
 </div>
 
@@ -495,6 +598,7 @@
         </div>
     </div>
 
+    <!-- Imagen a la izquierda -->
     <div>
         <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/dragonmision.jpg" alt="Imagen relacionada con misión y visión">
     </div>
@@ -510,6 +614,7 @@
         <p><strong>Compromiso:</strong> Nos esforzamos por ofrecer el mejor servicio y atención al cliente.</p>
     </div>
 
+    <!-- Imagen a la derecha -->
     <div>
         <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/paisajevision.jpg" alt="Imagen de valores">
     </div>

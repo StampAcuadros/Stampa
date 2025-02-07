@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stampa - Cuadros Personalizados</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <style>
         /* Estilos generales */
         body {
@@ -28,10 +28,13 @@
             font-size: 18px;
             font-weight: bold;
             margin: 0 20px;
-            transition: color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: color 0.3s ease, background-color 0.3s ease;
         }
         nav a:hover {
             color: #ba9988;
+            background-color: #fff;
         }
 
         /* Imagen debajo del menú */
@@ -48,31 +51,31 @@
         .header-image img:hover {
             transform: scale(1.05);
         }
-
+        
         /* Categorías con iconos */
         .category-icons {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: -50px;
+            margin-top: -50px; /* Ajustar para que se monten encima */
             position: absolute;
-            top: 60%;
+            top: 60%; /* Ajusta la posición de los círculos sobre la imagen */
             left: 50%;
             transform: translateX(-50%);
         }
         .category-icons div {
             background-color: white;
             border-radius: 50%;
-            width: 180px;
-            height: 180px;
+            width: 180px; /* 20% más grande */
+            height: 180px; /* 20% más grande */
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             overflow: hidden;
-            border: 7px solid white;
-            margin-top: 80px;
+            border: 7px solid white; /* Borde blanco agregado */
+            margin-top: 80px; /* Esto baja los círculos 1 cm */
         }
         .category-icons div:hover {
             transform: scale(1.1);
@@ -91,22 +94,21 @@
 
         /* ¿Cómo funciona Stampa? */
         .how-it-works {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; /* Usamos flexbox para alinear los elementos */
+            justify-content: center; /* Centra los elementos horizontalmente */
+            align-items: center; /* Centra los elementos verticalmente */
             margin-top: 130px;
-            padding: 20px;
+            padding: 30px;
             color: #333;
-            text-align: left; /* Asegura que el texto también se centre */
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-            background-color: white; /* Fondo blanco */
+            background-color: white;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .how-it-works img {
-            width: 30%;
+            width: 35%;
             height: auto;
             margin-right: 30px;
-            margin-left: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
         }
@@ -147,7 +149,6 @@
             font-size: 30px;
             margin-bottom: 20px;
             color: #ba9988;
-            text-align: center;
         }
 
         .feature-details {
@@ -157,7 +158,6 @@
             gap: 30px;
             width: 100%;
             max-width: 1200px;
-            margin-top: 0 auto;
         }
 
         .feature-text {
@@ -165,10 +165,8 @@
             font-size: 18px;
             line-height: 1.8;
             width: 60%;
-            margin: 0 auto; /* Centra el texto dentro de su contenedor */
-    
         }
-    
+
         .feature-text li {
             margin: 10px 0;
         }
@@ -205,84 +203,6 @@
             background-color: #977346;
         }
 
-                .features h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: #ba9988; /* Título con color #ba9988 */
-            text-align: center;
-        }
-
-        .features ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: flex-start;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .features li {
-            font-size: 18px;
-            text-align: left;
-            width: 45%;
-        }
-
-        .features li strong {
-            font-weight: bold;
-        }
-
-        .features img {
-            width: 20%; /* Ajusta el tamaño de la imagen */
-            margin-left: 20px;
-        }
-
-        /* Sección Sobre Nosotros */
-        .mission-vision-values {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 40px 0;
-            background-color: #fff;
-            padding: 40px;
-        }
-
-        .mission-vision-values h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .mission-vision-values p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            font-weight: normal;
-        }
-
-        .mission-vision-values .text-section {
-            margin-bottom: 20px;
-        }
-
-        .mission-vision-values .values {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 30px;
-        }
-
-        .mission-vision-values .values div {
-            width: 48%;
-            text-align: left;
-        }
-
-        .mission-vision-values .values img {
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .mission-vision-values .values p strong {
-            font-weight: bold;
-        }
-
-        
         /* Productos */
         .products {
             display: flex;
@@ -425,7 +345,7 @@
             text-align: center;
             width: 200px;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             nav {
@@ -433,13 +353,12 @@
             }
 
             nav a {
-                font-size: 10px;
-                margin: 0 5px;
+                font-size: 12px;
+                margin: 0 10px;
             }
 
-            /* Categorías */
             .category-icons {
-                flex-direction: row;
+                flex-direction: column;
                 gap: 15px;
             }
 
@@ -460,17 +379,10 @@
             .how-it-works {
                 flex-direction: column;
                 align-items: center;
-                margin-top: 30px; /* Menor margen superior para pantallas pequeñas */
             }
 
             .how-it-works img {
                 width: 80%;
-                margin-right: 0;
-            }
-
-            .features ul {
-                flex-direction: column;
-                gap: 10px;
             }
 
             .feature-details {
@@ -487,17 +399,6 @@
                 width: 80%;
             }
 
-            .category-icons div {
-                width: 55px;
-                height: 55px;
-                margin-top: -200px; /* Asegura que los círculos permanezcan sobre la imagen */
-                border-width: 4px; /* Reduce el grosor del borde en pantallas pequeñas */
-            }
-
-            .category-texts p {
-                font-size: 14px; /* Ajusta el tamaño del texto */
-            }
-            
             .mission-vision-values .vision-mission {
                 flex-direction: column;
                 align-items: center;
@@ -572,17 +473,17 @@
     <h2>Conviértete tus recuerdos en arte con cuadros personalizados de alta calidad</h2>
 
     <div class="feature-details">
-        <div class="feature-text">
-            <p><strong>Personalización sin límites:</strong> Elige una imagen de nuestro catálogo o sube tu propia foto.</p>
-            <p><strong>Calidad Premium:</strong> Impresión en alta definición con materiales resistentes.</p>
-            <p><strong>Diseño Exclusivo:</strong> Cada cuadro refleja tu estilo y personalidad.</p>
-            <p><strong>Sostenibilidad:</strong> Materiales ecológicos y tintas sin tóxicos.</p>
-            <p><strong>Entrega Segura:</strong> Compra fácil y envío a todo el país con garantía de satisfacción.</p>
-        </div>
+      <div class="feature-text">
+        <p><strong>Personalización sin límites:</strong> Elige una imagen de nuestro catálogo o sube tu propia foto.</p>
+        <p><strong>Calidad Premium:</strong> Impresión en alta definición con materiales resistentes.</p>
+        <p><strong>Diseño Exclusivo:</strong> Cada cuadro refleja tu estilo y personalidad.</p>
+        <p><strong>Sostenibilidad:</strong> Materiales ecológicos y tintas sin tóxicos.</p>
+        <p><strong>Entrega Segura:</strong> Compra fácil y envío a todo el país con garantía de satisfacción.</p>
+    </div>
         <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/recuadrobrujasolo.jpg" alt="Cuadro personalizado">
     </div>
 
-    <!-- Botón para personalizar el cuadro -->
+        <!-- Botón para personalizar el cuadro -->
     <a href="#contacto" class="customize-btn">Personaliza tu cuadro ahora</a>
 </div>
 
@@ -671,11 +572,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-

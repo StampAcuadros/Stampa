@@ -1,265 +1,438 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stampa - Cuadros Personalizados</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* Estilos generales */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Estilo para el menú de navegación */
-    nav {
-      background-color: #4A4A4A;
-      width: 100%;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      font-size: 0.8em; /* Reducido un 20% */
-      color: white;
-      margin: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      padding: 10px 20px;
-    }
-
-    /* Sección de cuadros personalizados */
-    .section-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      margin: 20px;
-      padding: 20px;
-      flex-wrap: wrap;
-    }
-
-    .section-text {
-      flex: 1;
-      padding: 20px;
-      font-size: 1.1em;
-      line-height: 1.6;
-      text-align: center; /* Centrando la tipografía */
-    }
-
-    .section-text strong {
-      font-weight: bold;
-    }
-
-    .section-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .section-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    /* Estilo para los encabezados */
-    .heading {
-      color: #4A4A4A;
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    /* Estilo para los botones */
-    .btn {
-      background: #4A4A4A;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1.2em;
-      display: inline-block;
-      margin-top: 20px;
-    }
-
-    /* Sección de testimonios con fondo diferenciado */
-    .testimonials {
-      background-color: #DBDBDB;
-      padding: 20px;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .testimonials blockquote {
-      font-family: 'Lato', sans-serif !important;  /* Aplica la fuente Lato */
-      font-style: italic !important;  /* Mantén la cursiva */
-      color: #4A4A4A;
-      font-size: 1em; /* Tipografía 10% más pequeña */
-    }
-
-    .testimonials p {
-      color: #4A4A4A;
-      font-size: 1.2em;
-    }
-
-    /* Sección de redes sociales */
-    .social-media {
-      text-align: center;
-      padding: 20px;
-      background-color: #EFEFEF;
-      margin-top: 40px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stampa - Cuadros Personalizados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f2e7;
+            color: #333; /* Color de texto más oscuro para mayor legibilidad */
         }
-        footer {
+
+        /* Menú */
+        nav {
+            background-color: #4a4a4a;
+            padding: 15px 0;
             text-align: center;
-            background-color: #d8bfae;
-            padding: 20px;
-            color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra sutil al menú */
         }
-        footer p {
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 20px;
+            transition: color 0.3s ease; /* Transición suave para color al pasar el cursor */
+        }
+        nav a:hover {
+            color: #ba9988; /* Color de enlace al pasar el cursor */
+        }
+
+        /* Imagen debajo del menú */
+        .header-image {
+            text-align: center;
+            margin-top: 0px;
+            position: relative;
+        }
+        .header-image img {
+            width: 100%;
+            max-width: 1600px;
+            transition: transform 0.3s ease; /* Transición para imagen */
+        }
+        .header-image img:hover {
+            transform: scale(1.05); /* Efecto de zoom suave en la imagen */
+        }
+
+        /* Categorías con iconos */
+        .category-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: -50px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .category-icons div {
+            background-color: white;
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            border: 7px solid white;
+            margin-top: 80px;
+        }
+        .category-icons div:hover {
+            transform: scale(1.1);
+        }
+        .category-icons div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .category-icons div p {
+            margin-top: 10px;
             font-size: 16px;
+            font-weight: normal;
+            text-align: center;
         }
 
-    /* Ajuste de imágenes */
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+        /* ¿Cómo funciona Stampa? */
+        .how-it-works {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 130px;
+            padding: 20px;
+            color: #333;
+            background-color: white;
+            flex-wrap: wrap;
+        }
 
-    /* Estilos para pantallas pequeñas (celulares) */
-    @media (max-width: 768px) {
-      .section-container {
-        flex-direction: column !important;
-        align-items: center;
-        text-align: center;
-      }
+        .how-it-works img {
+            width: 30%;
+            height: auto;
+            margin-right: 30px;
+            margin-left: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
 
-      .section-text {
-        font-size: 1em;
-        padding: 10px;
-      }
+        .how-it-works img:hover {
+            transform: scale(1.05);
+        }
 
-      .section-image {
-        width: 100%;
-        padding: 10px;
-      }
+        .how-it-works ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.8;
+        }
 
-      nav ul {
-        flex-direction: column;
-      }
+        .how-it-works li {
+            margin: 10px 0;
+        }
 
-      nav ul li a {
-        padding: 10px 0;
-        font-size: 1.5em;
-      }
-    }
-  </style>
+        .how-it-works h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ba9988;
+            text-align: center;
+        }
+
+        /* Características */
+        .features {
+            text-align: center;
+            margin: 40px 0;
+            background-color: #f4f2e7;
+            padding: 40px;
+        }
+
+        .features h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #ba9988;
+        }
+
+        .feature-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .feature-text {
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.8;
+            width: 60%;
+        }
+
+        .feature-text li {
+            margin: 10px 0;
+        }
+
+        .feature-text strong {
+            font-weight: bold;
+        }
+
+        .feature-details img {
+            width: 35%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Botón Personalizar cuadro */
+        .customize-btn-section {
+            background-color: white;
+            padding: 20px;
+        }
+
+        .customize-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-weight: bold;
+            color: white;
+            background-color: #ba9988;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .customize-btn:hover {
+            background-color: #977346;
+        }
+
+        /* Productos */
+        .products {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .products div {
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .products div:hover {
+            transform: scale(1.05); /* Efecto de zoom para los productos */
+        }
+
+        .products div img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Testimonios */
+        .testimonials {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .testimonials .testimonial {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonials .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .testimonials .testimonial p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #d8bfae;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        footer p {
+            font-size: 12px;
+        }
+
+        footer .social-links {
+            margin-top: 10px;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px 0;
+            }
+
+            nav a {
+                font-size: 12px;
+                margin: 0 5px;
+            }
+
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .products div {
+                width: 80%;
+            }
+
+            .testimonials .testimonial {
+                width: 80%;
+            }
+
+            .how-it-works {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .how-it-works img {
+                width: 80%;
+            }
+
+            .feature-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-details img {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Menú -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Nuestros productos</a>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
-  <!-- Menú de navegación -->
-  <nav>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#productos">Nuestros productos</a></li>
-      <li><a href="#nosotros">Sobre Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cabezoteinicialpagina.png" alt="Stampa" width="90%">
-  </p>
-
-  <!-- Sección de Convierte tus recuerdos en arte con cuadros personalizados -->
-  <section id="cuadros">
-    <p class="heading">Convierte tus recuerdos en arte con cuadros personalizados de alta calidad</p>
-
-    <section class="section-container">
-      <div class="section-text">
-        <p><strong>Personalización sin límites</strong><br>Elige una imagen de nuestro catálogo o sube tu propia foto.</p>
-        <p><strong>Calidad Premium</strong><br>Impresión en alta definición con materiales resistentes.</p>
-        <p><strong>Diseño Exclusivo</strong><br>Cada cuadro refleja tu estilo y personalidad.</p>
-        <p><strong>Sostenibilidad</strong><br>Materiales ecológicos y tintas sin tóxicos.</p>
-        <p><strong>Entrega Segura</strong><br>Compra fácil y envío a todo el país con garantía de satisfacción.</p>
-      </div>
-      <div class="section-image">
-        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrobrujagato.jpg" alt="Cuadro personalizado">
-      </div>
-    </section>
-
-    <p align="center">
-      <a href="#" class="btn">🎨 Personaliza tu cuadro ahora 🎨</a>
-    </p>
-  </section>
-
-  <!-- Sección de cómo funciona Stampa -->
-  <p align="center">
-        <img src="pasos_proceso.png" alt="¿Cómo funciona Stampa?" width="700" style="border-radius: 10px;">
-  </p>
-
-  <section class="section-container">
-    <div class="section-text">
-      <p><strong><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/primerpaso.png" alt="Paso 1" style="height: 2em; width: 2em;"> Elige tu imagen o sube tu foto.</strong></p>
-      <p><strong><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/segundopaso.png" alt="Paso 2" style="height: 2em; width: 2em;"> Nosotros la retocamos y optimizamos para impresión.</strong></p>
-      <p><strong><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/tercerpaso.png" alt="Paso 3" style="height: 2em; width: 2em;"> Imprimimos en materiales premium con calidad HD.</strong></p>
-      <p><strong><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuartopaso.png" alt="Paso 4" style="height: 2em; width: 2em;"> Recíbelo en casa y decora tu espacio.</strong></p>
+    <!-- Imagen debajo del menú -->
+    <div class="header-image">
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cabezotepaginaprincipal.png" alt="Encabezado">
     </div>
-    <div class="section-image">
-      <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrofamily.png" alt="Proceso de personalización">
+
+    <!-- Categorías con iconos -->
+    <div class="category-icons">
+        <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/mascota.jpg" alt="Mascotas"></div>
+        <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/paisajes.jpg" alt="Paisajes"></div>
+        <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/abstracto.jpg" alt="Abstracto"></div>
+        <div><img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/personalizado.jpg" alt="Personalizada"></div>
     </div>
-  </section>
 
-  <p align="center">
-    <a href="#" class="btn">Explorar Catálogo</a>
-  </p>
+    <!-- ¿Cómo funciona Stampa? -->
+    <div class="how-it-works">
+        <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadrofamily.png" alt="Imagen de familia">
+        <div>
+            <h2>¿Cómo funciona Stampa?</h2>
+            <ul>
+                <li>1. Elige tu imagen o sube tu foto.</li>
+                <li>2. Nosotros la retocamos y optimizamos para impresión.</li>
+                <li>3. Imprimimos en materiales premium con calidad HD.</li>
+                <li>4. Recíbelo en casa y decora tu espacio.</li>
+            </ul>
+        </div>
+    </div>
 
-  <!-- Sección Testimonios -->
-  <section class="testimonials">
-    <p class="heading">Lo que dicen nuestros clientes:</p>
-    <blockquote>
-      <p>"Siempre quise tener un cuadro de mis gatos, y Stampa lo hizo realidad. ¡La calidad es increíble!"</p>
-      <footer>- Laura Martínez</footer>
-    </blockquote>
-    <blockquote>
-      <p>"Pedí un cuadro personalizado para mi mascota, y el resultado fue simplemente espectacular. ¡Gracias Stampa!"</p>
-      <footer>- Ana López</footer>
-    </blockquote>
-    <blockquote>
-      <p>"La calidad de impresión es increíble. ¡Lo recomendaré a todos!"</p>
-      <footer>- Juan Pérez</footer>
-    </blockquote>
-  </section>
+    <!-- Características -->
+    <div class="features">
+        <h2>Conviértete tus recuerdos en arte con cuadros personalizados de alta calidad</h2>
 
-  <footer>
-    <p>Contacto: Bogotá, Colombia | Email: stampacuadrospersonalizados@gmail.com</p>
-    <p>Síguenos en nuestras redes sociales: Instagram | Facebook | Twitter | YouTube</p>
-</footer>
+        <div class="feature-details">
+            <div class="feature-text">
+                <p><strong>Personalización sin límites:</strong> Elige una imagen de nuestro catálogo o sube tu propia foto.</p>
+                <p><strong>Calidad Premium:</strong> Impresión en alta definición con materiales resistentes.</p>
+                <p><strong>Diseño Exclusivo:</strong> Cada cuadro refleja tu estilo y personalidad.</p>
+                <p><strong>Sostenibilidad:</strong> Materiales ecológicos y tintas sin tóxicos.</p>
+                <p><strong>Entrega Segura:</strong> Compra fácil y envío a todo el país con garantía de satisfacción.</p>
+            </div>
+            <img src="https://raw.githubusercontent.com/Mile9090/stampa-cuadros-personalizados/refs/heads/main/recuadrobrujasolo.jpg" alt="Cuadro personalizado">
+        </div>
 
-  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/02/01/00/20250201000217-5NLTVM7D.js"></script>
+        <a href="#contacto" class="customize-btn">Personaliza tu cuadro ahora</a>
+    </div>
+
+    <!-- Productos -->
+    <div class="products">
+        <div>
+            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadroguerrerosalaa.png" alt="Producto 1">
+        </div>
+        <div>
+            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadromar.jpg" alt="Producto 2">
+        </div>
+        <div>
+            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/cuadroiguanamoto.jpg" alt="Producto 3">
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h2>Lo que dicen nuestros clientes:</h2>
+        <div class="testimonial">
+            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/LauraMart%C3%ADnez.png" alt="Laura Martínez">
+            <p>"Siempre quise tener un cuadro de mis gatos, y Stampa lo hizo realidad. ¡La calidad es increíble!"</p>
+            <p>- Laura Martínez</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/ana.png" alt="Ana López">
+            <p>"Pedí un cuadro personalizado para mi mascota, y el resultado fue simplemente espectacular. ¡Gracias Stampa!"</p>
+            <p>- Ana López</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://raw.githubusercontent.com/StampAcuadros/Stampa/refs/heads/main/Juan.png" alt="Juan Pérez">
+            <p>"La calidad de impresión es increíble. ¡Lo recomendaré a todos!"</p>
+            <p>- Juan Pérez</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Bogotá, Colombia</p>
+        <p>stampacuadrospersonalizados@gmail.com</p>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">YouTube</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/02/01/00/20250201000217-5NLTVM7D.js"></script>
 
 </body>
 </html>
+
 
 
 
